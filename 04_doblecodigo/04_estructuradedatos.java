@@ -43,11 +43,12 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio, numbinario, total, numerototal;
+        int edad, opcion, socio, numbinario, total, numerototal, n, a, b, numero;
         int positivos = 0;
         int negativos = 0;
-        double precio, bono;
-        char letras;
+        double precio, bono; 
+        double lado, altura, base, radio;     
+        char letras, operacion;
         float precios = 0;
         float resultado = 0;
         int cantidad = 0; 
@@ -162,7 +163,97 @@ class EstructuradeDatos{
 
                 case 3:
                     //tarea
+                    
 
+                 {
+
+    
+
+                {   
+
+                  double centigrado, fahrenheit, kelvin;
+
+                 byte datoIn;
+
+                 int resp;
+
+                  Scanner teclado = new Scanner (System.in);
+
+       
+
+                 resp = 1;
+
+                  while (resp == 1)
+
+                {       
+
+                  System.out.println("PROGRAMA PARA CONVERTIR grados CENTiGRADOS A grados FAHRENHEIT O KELVIN");
+
+                 System.out.println ("");
+
+                 System.out.println ("Ingrese la temperatura en grados CENTIGRADOS");
+
+                 System.out.println ("");
+
+           
+
+                 centigrado = teclado.nextDouble();
+
+           
+
+                 System.out.println("Si desea convertir a grados fahrenheit presione 1");
+
+                 System.out.println ("");
+
+                 System.out.println ("Si desea convertir a grados kelvin presione 2"); 
+
+                 System.out.println ("");
+
+           
+
+                 datoIn = teclado.nextByte();
+
+           
+
+                 switch (datoIn)
+
+                 {           
+
+                 case 1:
+
+                    fahrenheit = centigrado * 1.8 + 32;
+
+                    System.out.println (centigrado + " grados centigrados equivalen a: " + fahrenheit + " grados fahrenheit");
+
+                break;               
+
+                case 2:
+
+                    kelvin = centigrado + 273.15;
+
+                    System.out.println(centigrado + " grados centigrados equivalen a " + kelvin + " grados kelvin");
+
+                break;               
+
+                default:
+
+                    System.out.println("SOLO DEBE DIGITAR 1 o 2");
+
+                 }           
+
+                  System.out.println ("Desea hacer otra conversion? digite: 1 si / 2 no");
+
+                  resp = teclado.nextInt();       
+
+                }   
+
+               }   
+
+                }
+                  break;                  
+
+
+                
                 case 4:
 
                     /*
@@ -219,27 +310,215 @@ class EstructuradeDatos{
                     }
 
                     System.out.println("El resultado es: " + resultado);
+                    break;
 
                 case 6:
                     //tarea
+                
+                    /*Métodos que permiten calcular las areas, estos reciben
+                      como parámetros el lado, base, altura y radio, dependiendo cada caso.
+                    */
+                    //Variables de tipo double
+                   
+
+                    
+            
 
                 case 7: 
+                    for(n = 1; n<= 10; n++){
+                        System.out.println(n + " " + (n*10)+ " " + (n*100) + " " + (n*1000));
+                    }
+                    break;
 
                 case 8:
                     //tarea de ustedes
+                    
+                    
+                    
 
                 case 9:
+                    /*
+                    ESCRIBA UN PROGRAMA QUE LEA EL LADO DE UN CUADRADO Y A CONTINUACIÓN LO IMPRIMA 
+                    EN FORMA DE ASTERISCOS SU PROGRAMA DEBERa PODER FUNCIONAR PARA CUADRADOS 
+                    DE TODOS TAMAÑOS ENTRE 1 Y 20. 
+                    */
+
+                    System.out.println("Cuadrado Magico");
+                    System.out.println("Inserta el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede imprimir
+                        //aqui tengo las filas
+                        for(int i = 1; i<=n; i++){
+                            //columnas
+                            for(int j = 1; j<=n; j++){
+                                System.out.print("* ");
+
+                            }
+                        System.out.println(" ");
+
+
+                            
+                        }
+                    }else{
+                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
+                    break;
+
 
 
                 case 10:
 
+                    System.out.println("Cuadrado Magico Hueco (Como tu ex asi dejo tu kokoro wiiii)");
+                    System.out.println("Inserta el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede imprimir
+
+                        //imprima la linea superior
+                        for(int i = 0; i < n; i++){
+                            System.out.print(" * ");
+                        }
+                        System.out.println();
+
+                        //lo de enmedio solo quiero las esquinas
+                        //cuadrado interno
+                        //aqui tengo las filas
+                        for(int i = 0; i < n-2; i++){
+                            System.out.print(" * ");
+                            //columnas
+                            for(int j = 0; j < n-2; j++){
+                                System.out.print("  ");
+
+                            }
+                        System.out.println("   * ");
+
+
+                            
+                        }
+
+                        //imprimir la linea inferior
+                        for(int i = 0; i < n; i++){
+                            System.out.print(" * ");
+                        }
+                        System.out.println();
+                    }else{
+                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
+                    break;
+
                 case 11:
                     //tarea
+                    System.out.println("patron de * ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede imprimir
+
+                        //imprima la linea superior
+                        for(int i = 0; i < n; i++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+
+                        //lo de enmedio solo quiero las esquinas
+                        //cuadrado interno
+                        //aqui tengo las filas
+                        for(int i = 0; i < n-4; i++){
+                            System.out.print("*");
+                            //columnas
+                            for(int j = 0; j < n-5; j++){
+                                System.out.print(" *");
+
+                            }
+                        System.out.println("* ");
+
+
+                            
+                        }
+
+                        //imprimir la linea inferior
+                        for(int i = 0; i > n; i++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }else{
+                        
+                    }
+
+                    break;
+            
 
                 case 12:
                     //tarea
+                    for (int i = 1; i <= 3; i++) {   
+                        for (int j=1;j<=3-i;j++){    
+                            System.out.print(" ");
+                        }
+                        for(int k=1;k<=2*i-1;k++){   
+                            System.out.print("*");
+                        }
+                        System.out.println();  
+                    }
+                    for (int i = 1; i <= 2; i++) { 
+                        for(int j=1;j<=i;j++){   
+                            System.out.print(" ");
+                        }
+                        for(int k=1;k<=5-2*i;k++){   
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                    break;
 
                 case 13:
+
+                    System.out.println("Calculadora maizsoro");
+                    System.out.println("Ingresar un número");
+                    a = entrada.nextInt();
+                    System.out.println("Ingresa un segundo número");
+                    b = entrada.nextInt();
+                    System.out.println("Ingresa el tipo de operacion que deseas realizar : (+ , -, *, /)");
+                    operacion = entrada.next().charAt(0);
+
+                    /*
+                    switch 
+                        case +
+                        case -
+                        case *
+                        case /
+                    */ 
+
+                    switch(operacion){
+                        case '+' :
+                            resultado = a+b;
+                            System.out.println("La suma es de: " + resultado);
+                            break;
+                        case '-' :
+                            resultado = a-b;
+                            System.out.println("La resta es de: " + resultado);
+                            break;
+                        case '*' :
+                            resultado = a*b;
+                            System.out.println("La multiplicación es de: " + resultado);
+                            break;
+                        case '/' :
+                            if(b != 0){
+                                resultado = a/b;
+                                System.out.println("La división es de: " + resultado);
+                               
+                            }else{
+                                System.out.println("No es posible dividir entre 0");
+                            }
+                            break;
+                        default :
+                            System.out.println("Operación no valida");
+
+                    }
 
                 default:
                     System.out.println("Gracias por ver este hermoso programa :3");
