@@ -163,9 +163,7 @@ class EstructuradeDatos{
 
                 case 3:
                     //tarea
-                    
-
-                 {
+                     {
 
     
 
@@ -320,6 +318,34 @@ class EstructuradeDatos{
                     */
                     //Variables de tipo double
                    
+
+                   
+                     //Variables de tipo double
+                    System.out.print("Ingrese el lado del cuadrado: "); //Pedimos el lado por teclado
+                    lado = sc.nextDouble(); //Almacenamos el lado en la variable lado
+                    System.out.print("Ingrese la base del triangulo: "); 
+                    base = sc.nextDouble(); 
+                    System.out.print("Ingrese la altura del triangulo: "); 
+                    altura = sc.nextDouble(); 
+                    System.out.print("Ingrese la base del rectangulo: ");
+                    base = sc.nextDouble(); 
+                    System.out.print("Ingrese la altura del rectangulo: "); 
+                    altura = sc.nextDouble(); 
+                    System.out.print("Ingrese el radio del circulo: "); 
+                    radio = sc.nextDouble(); 
+                   
+                    System.out.println("------------------------------------------");
+                    System.out.println("El area del cuadrado es: " + af.areaCuadrado(lado));
+                    System.out.println("El area del triangulo es: " + af.areaTriangulo(base, altura));
+                    System.out.println("El area del rectangulo es: " + af.areaRectangulo(base, altura));
+                    System.out.println("El area del circulo es: " + af.areaCirculo(radio));
+                    
+
+                    
+                     
+                    
+                    break;
+                
 
                     
             
@@ -519,6 +545,7 @@ class EstructuradeDatos{
                             System.out.println("Operación no valida");
 
                     }
+                    
 
                 default:
                     System.out.println("Gracias por ver este hermoso programa :3");
