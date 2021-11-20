@@ -272,6 +272,42 @@ public class Ejercicios{
         
         
         */
+        boolean m = false;
+        int n;
+        char continuar;
+
+        do{
+            System.out.println("itroduce el tamaño del cuadro, no negativos y no mator de 100");
+            n = entrada.nextInt();
+            if( n <0 || n>100 ){
+                m =true;
+                Systemp.out.println("elcuadro no acepta negativos ni mayores de 100");
+            }else{
+                for(int i=1; i<=n; i++){
+                    for(int j = 1;j<=n; j++){
+                        if(i % 2 !=0){
+                            System.out.println("/  ");
+
+                        }else{
+                            System.out.println("*  ");
+
+                        }
+                    }
+                System.out.println(" ");    
+                }
+
+            }
+            System.out.println("desea hacer otro cuadro presiona  's' para si");
+            continuar = entrada.next().charAt(0);
+            if (continuar =='s'|| continuar == 's'){
+
+            }else{
+                m = true;
+            }
+        
+            
+        }while(m);
 
     }
 }
+
