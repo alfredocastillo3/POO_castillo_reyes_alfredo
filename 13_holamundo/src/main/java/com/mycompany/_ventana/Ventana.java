@@ -18,6 +18,7 @@ import javax.swing.*;
 public class Ventana {
     
     public static void main(String[] args){
+        this.setLocationRelativeTo(null);
     
         /*
         Como se vio en la teoria es necesario primero crear el frame 
@@ -91,31 +92,9 @@ public class Ventana {
         registrobutton.setBounds(180, 80, 120, 25);
         panel.add(registrobutton);
     }
-    public class CenterDialogBox extends JDialog  
-{  
- @Override
- public void setSize(int width, int height)  
- {  
-  super.setSize(width, height);  
-   
-  //Get the screen size  
-  Toolkit toolkit = Toolkit.getDefaultToolkit();  
-  Dimension screenSize = toolkit.getScreenSize();  
+
   
-  //Calculate the frame location  
-  int x = (screenSize.width - getWidth()) / 2;  
-  int y = (screenSize.height - getHeight()) / 2;  
    
-  //Set the new frame location  
-  setLocation(x, y);     
- }  
-  
- public void setSize(Dimension size)  
- {  
-  setSize(size.width, size.height);  
- }  
-}  
-    
 
         /*
         Tarea deberan de integrar el metodo para que la ventana
