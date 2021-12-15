@@ -1,15 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controles;
 
 /**
  *
- * @author demon
+ * @author crami
  */
-//apuntador -> nivel del acceso a la clase, porque esta separada en paquetes
 import Documentos.CLibro;
 import java.util.*;
 import java.io.*;
@@ -145,7 +143,7 @@ public class ManipularLibros implements Serializable{
         if(listadelibros.isEmpty()){
             System.out.println("No hay libros registrados");
         }else{
-            System.out.println("Ingresa el ID del libro que vas a eliminar: ");
+            System.out.println("Ingresa el Nombre del libro que vas a eliminar: ");
             posborrar = buscar();
             
             if(posborrar < listadelibros.size()){
@@ -194,7 +192,7 @@ public class ManipularLibros implements Serializable{
                     //autor
                     System.out.println("El autor es: ");
                     System.out.println("Autor: " + listadelibros.get(posmodificar).getAutor());
-                    System.out.println("Ingresa el nuevo actor");
+                    System.out.println("Ingresa el nuevo autor");
                     listadelibros.get(posmodificar).setAutor(entrada.next());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Autor: " + listadelibros.get(posmodificar).getAutor());
@@ -254,8 +252,7 @@ public class ManipularLibros implements Serializable{
     public void setObjetoarchivolibros(ArchivoL objetoarchivolibros) {
         this.objetoarchivolibros = objetoarchivolibros;
     }
-
-    public void agregarLibro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+    
+    
 }

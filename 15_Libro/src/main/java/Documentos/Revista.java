@@ -50,6 +50,14 @@ public class Revista extends CLibro{
         System.out.println("Ingresa el tipo de revista");
         tipo_revista = entrada.nextLine();
     }
+
+    public String getTiporevista() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setTiporevista(String next) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
