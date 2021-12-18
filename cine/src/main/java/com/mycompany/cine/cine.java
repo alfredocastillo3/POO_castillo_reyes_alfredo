@@ -99,7 +99,7 @@ this.setVisible(false);
         int dato=JOptionPane.showConfirmDialog(rootPane,"Esta seguro de salir");
         if(dato==0){
             System.exit(0);
-            JOptionPane.showConfirmDialog(rootPane,"Secion terminada");
+            JOptionPane.showConfirmDialog(rootPane,"Secion terminada");}
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
